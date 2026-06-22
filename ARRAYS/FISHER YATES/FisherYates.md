@@ -139,6 +139,8 @@ Backward traversal + shrinking random range = uniform in-place shuffle
 
 ---
 
-## Final note
+### Fisher–Yates EXAMPLE Notes
 
-For Part i, the **Fisher–Yates Shuffle** is the correct and optimal solution because it is efficient, in-place, and provably unbiased.
+<img width="717" height="1280" alt="WhatsApp Image 2026-06-22 at 11 54 26 PM" src="https://github.com/user-attachments/assets/b578d562-7bf6-4ca6-bb5c-73e8b9f9c7a8" />
+
+
