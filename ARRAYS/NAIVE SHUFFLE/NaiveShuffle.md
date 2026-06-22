@@ -201,8 +201,5 @@ Forward loop + full random range every step = biased shuffle
 
 ---
 
-## Final note
-
-For Part i_i, the naive shuffle fails because the number of execution paths is `n^n`, while the number of valid permutations is only `n!`.
-
-Since these do not align, the shuffle cannot assign equal probability to every permutation, and bias is unavoidable.
+## EXAMPLE NOTES
+<img width="810" height="1280" alt="WhatsApp Image 2026-06-22 at 11 54 26 PM (1)" src="https://github.com/user-attachments/assets/ec070edb-4399-4011-a246-587a3148cdc3" />
