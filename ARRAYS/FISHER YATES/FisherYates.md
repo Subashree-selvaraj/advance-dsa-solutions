@@ -22,7 +22,7 @@ It satisfies all required conditions:
 
 ---
 
-## Core idea
+## idea
 
 The algorithm works by processing the array from **right to left**.
 
@@ -35,99 +35,7 @@ At each step:
 
 This ensures that each position is finalized exactly once.
 
----
 
-## Visual explanation
-
-Suppose the array is:
-
-```text
-[a, b, c, d, e]
-```
-
-The algorithm behaves like this:
-
-```text
-Step 1:
-Choose one element from positions 0..4
-Place it at position 4
-
-Step 2:
-Choose one element from positions 0..3
-Place it at position 3
-
-Step 3:
-Choose one element from positions 0..2
-Place it at position 2
-
-Step 4:
-Choose one element from positions 0..1
-Place it at position 1
-```
-
-### Shuffle boundary
-
-```text
-Unshuffled Part     | Fixed Part
-[a, b, c, d, e]    | [ ]
-[a, b, c, d]       | [ e ]
-[a, b, c]          | [ d, e ]
-[a, b]             | [ c, d, e ]
-[a]                | [ b, c, d, e ]
-```
-
-At every step, one element is selected uniformly and locked into its final position.
-
----
-
-## Why the algorithm is unbiased
-
-At each step, the number of possible choices decreases:
-
-```text
-n, then (n-1), then (n-2), ..., then 1
-```
-
-So the total number of possible execution paths is:
-
-```text
-n × (n-1) × (n-2) × ... × 1 = n!
-```
-
-The number of distinct permutations of `n` elements is also:
-
-```text
-n!
-```
-
-Since the number of algorithmic paths exactly matches the number of valid permutations, every permutation is produced with equal probability.
-
-That is why Fisher–Yates is mathematically correct.
-
----
-
-## Complexity analysis
-
-| Property | Value |
-|---|---|
-| Time Complexity | `O(n)` |
-| Auxiliary Space | `O(1)` |
-| In-place | Yes |
-| Uniform Randomness | Yes |
-
----
-
-## Why this satisfies the question
-
-This algorithm satisfies the question because it:
-
-- shuffles the array completely at random
-- produces all possible permutations with equal probability
-- completes in linear time
-- uses constant extra memory
-- performs the operation entirely in place
-
----
 
 ## Key takeaway
 
