@@ -110,3 +110,13 @@ public class XorLinkedListDemo {
         list.traverseBackward();
     }
 }
+
+
+// parti_i:
+// Two distinct disadvantages of an XOR linked list are:
+
+//1. Debugging becomes difficult.
+// Real-time debuggers and memory inspection tools cannot easily follow the list because the links are stored as XOR-combined addresses instead of normal next and prev pointers.
+
+//2. Garbage collection and tracing are harder.
+// Automated runtimes like garbage collectors may not recognize XOR-compressed links as valid object references, so tracing live nodes and reclaiming memory safely becomes more complicated.
